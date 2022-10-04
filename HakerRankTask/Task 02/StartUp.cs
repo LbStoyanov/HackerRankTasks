@@ -42,6 +42,7 @@ class Solution
         string s = Console.ReadLine();
 
         string result = Result.timeConversion(s);
+        //Console.WriteLine(result);
 
         textWriter.WriteLine(result);
 
