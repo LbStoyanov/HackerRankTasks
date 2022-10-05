@@ -45,6 +45,7 @@ namespace Task_04
                 if (kvp.Value == 1)
                 {
                     result = kvp.Key;
+                    break;
                 }
             }
 
