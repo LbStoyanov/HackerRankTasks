@@ -45,26 +45,29 @@ namespace Task_03
             {
                 var currentQuery = queries[i];
 
+                result.Add(0);
+
+                //if (!queryDict.ContainsKey(currentQuery))
+                //{
+                //    queryDict.Add(currentQuery, 0);
+                //}
+
                 for (int j = 0; j < strings.Count; j++)
                 {
                     var currentString = strings[j];
-
-                    if (!queryDict.ContainsKey(currentQuery))
-                    {
-                        queryDict.Add(currentQuery, 0);
-                    }
-
+                    
                     if (currentQuery == currentString)
                     {
-                        queryDict[currentQuery]++;
+                        result[i]++;
+                        //queryDict[currentQuery]++;
                     }
                 }
             }
 
-            foreach (var query in queryDict)
-            {
-                result.Add(query.Value);
-            }
+            //foreach (var query in queryDict)
+            //{
+            //    result.Add(query.Value);
+            //}
 
             
             return result;
