@@ -9,36 +9,20 @@ namespace Task_06
         static void Main(string[] args)
         {
 
-            var dogfood = int.Parse(Console.ReadLine());
-            var catfood = int.Parse(Console.ReadLine());
-            double dogfoodprice = dogfood * 2.50;
-            double catfoodprice = catfood * 4.00;
-            var totalprice = dogfoodprice + catfoodprice;
-            Console.WriteLine(totalprice + " lv.");
+           // Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
 
+            List<List<int>> arr = new List<List<int>>();
 
+            for (int i = 0; i < n; i++)
+            {
+                arr.Add(Console.ReadLine().TrimEnd().Split(' ')
+                    .ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            }
 
+            int result = diagonalDifference(arr);
 
-
-
-
-
-
-
-            //Given a square matrix, calculate the absolute difference between the sums of its diagonals.
-            //int n = Convert.ToInt32(Console.ReadLine().Trim());
-
-            //List<List<int>> arr = new List<List<int>>();
-
-            //for (int i = 0; i < n; i++)
-            //{
-            //    arr.Add(Console.ReadLine().TrimEnd().Split(' ')
-            //        .ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
-            //}
-
-            //int result = diagonalDifference(arr);
-
-            //Console.WriteLine(result);
+            Console.WriteLine(result);
 
         }
 
